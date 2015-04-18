@@ -1,0 +1,4 @@
+2015-04-11 14:31:07.2969|INFO|GA.Web.Default|Button is clicked
+2015-04-11 14:31:07.3039|INFO|GA.Web.Default|Service is called
+2015-04-11 14:31:08.9845|INFO|GA.Web.Default|Selection box was changed
+2015-04-11 14:31:10.6609|INFO|GA.Web.Default|Selection box was changed
