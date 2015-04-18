@@ -1,5 +1,0 @@
-C:\Users\rahul_000\Documents\Projects\GeneralAssembly\GA.Data\bin\Debug\GA.Data.dll
-C:\Users\rahul_000\Documents\Projects\GeneralAssembly\GA.Data\bin\Debug\GA.Data.pdb
-C:\Users\rahul_000\Documents\Projects\GeneralAssembly\GA.Data\obj\Debug\GA.Data.csprojResolveAssemblyReference.cache
-C:\Users\rahul_000\Documents\Projects\GeneralAssembly\GA.Data\obj\Debug\GA.Data.dll
-C:\Users\rahul_000\Documents\Projects\GeneralAssembly\GA.Data\obj\Debug\GA.Data.pdb

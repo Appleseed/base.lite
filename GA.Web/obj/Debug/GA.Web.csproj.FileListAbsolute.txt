@@ -1,9 +1,0 @@
-C:\Users\rahul_000\Documents\Projects\GeneralAssembly\GA.Web\bin\GA.Web.dll
-C:\Users\rahul_000\Documents\Projects\GeneralAssembly\GA.Web\bin\GA.Web.pdb
-C:\Users\rahul_000\Documents\Projects\GeneralAssembly\GA.Web\bin\GA.Data.dll
-C:\Users\rahul_000\Documents\Projects\GeneralAssembly\GA.Web\bin\GA.Data.pdb
-C:\Users\rahul_000\Documents\Projects\GeneralAssembly\GA.Web\obj\Debug\GA.Web.csprojResolveAssemblyReference.cache
-C:\Users\rahul_000\Documents\Projects\GeneralAssembly\GA.Web\obj\Debug\GA.Web.dll
-C:\Users\rahul_000\Documents\Projects\GeneralAssembly\GA.Web\obj\Debug\GA.Web.pdb
-C:\Users\rahul_000\Documents\Projects\GeneralAssembly\GA.Web\bin\NLog.dll
-C:\Users\rahul_000\Documents\Projects\GeneralAssembly\GA.Web\bin\NLog.xml
