@@ -1,24 +1,15 @@
-﻿<Properties StartupItem="GA.Web\GA.Web.csproj">
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug|x86" PreferredExecutionTarget="ChromeHTML" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="GA.Web\Default.aspx.cs">
+﻿<Properties StartupItem="GA.Console\GA.Console.csproj">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug|x86" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="GA.Console\Program.cs">
     <Files>
-      <File FileName="GA.Web\web.config" Line="58" Column="58" />
+      <File FileName="GA.Web\web.config" Line="41" Column="17" />
       <File FileName="GA.Web\GA.Web.csproj" Line="1" Column="1" />
-      <File FileName="GA.Console\app.config" Line="33" Column="33" />
-      <File FileName="GA.Console\Program.cs" Line="54" Column="54" />
+      <File FileName="GA.Console\app.config" Line="13" Column="67" />
       <File FileName="GA.Console\packages.config" Line="1" Column="1" />
       <File FileName="GA.Web\Default.aspx.cs" Line="8" Column="8" />
-      <File FileName="GA.Web\Global.asax.cs" Line="3" Column="3" />
+      <File FileName="GA.Web\Global.asax.cs" Line="1" Column="1" />
+      <File FileName="GA.Console\Program.cs" Line="28" Column="4" />
     </Files>
-    <Pads>
-      <Pad Id="ProjectPad">
-        <State expanded="True">
-          <Node name="GA.Web" expanded="True" selected="True">
-            <Node name="Global.asax" expanded="True" />
-          </Node>
-        </State>
-      </Pad>
-    </Pads>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />

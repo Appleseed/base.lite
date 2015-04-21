@@ -4,6 +4,8 @@ using System.Collections.Generic;
 using NLog;
 using MySql.Data;
 using MySql.Data.MySqlClient;
+using MongoDB.Driver;
+using MongoDB.Bson;
 
 namespace GA.Console
 {
@@ -13,6 +15,61 @@ namespace GA.Console
 		{
 			//CallRestService ();
 			//CallMySQLData ();
+
+			//TODO: connect to mongodb
+			//string connectionString = ConfigurationManager.ConnectionStrings[CONNECTION_STRING_KEY].ConnectionString;
+
+			MongoClient client = new MongoClient();
+			var database = client.GetDatabase("test");
+			var collection = database.GetCollection<CollectionItem>("CollectionItems");
+
+			//TODO: insert seed data into mongodb
+
+			List<CollectionItem> listOfItems = new List<CollectionItem>{ 
+					new CollectionItem{
+						ItemID 				= 1,
+						ItemTitle 			= "Anant",
+						ItemUrl 			= "http://www.anant.us",
+						ItemContentImage	= "",
+						ItemContentCache	= "",
+						ItemDescription		= "",
+						ItemTags			= new List<String>{ "Service", "Support", "Advisory", "Managed", "Maintenance", "CIO", "CTO"},
+						ItemProcessedDate 	= DateTime.Today,
+					}, 
+					new CollectionItem{
+						ItemID 				= 2,
+						ItemTitle 			= "Appleseed",
+						ItemUrl 			= "http://www.appleseedpapp.com",
+						ItemContentImage	= "",
+						ItemContentCache	= "",
+						ItemDescription		= "",
+						ItemTags			= new List<String>{ "Product", "Portal", "Search", "Integration", "Open Source"},
+						ItemProcessedDate 	= DateTime.Today,
+					},
+					new CollectionItem{
+						ItemID 				= 3,
+						ItemTitle 			= "KonoTree",
+						ItemUrl 			= "http://www.konotree.com",
+						ItemContentImage	= "",
+						ItemContentCache	= "",
+						ItemDescription		= "",
+						ItemTags			= new List<String>{ "Software as a Service", "Content", "Knowledge", "Relationships", "Internet Software"},
+						ItemProcessedDate 	= DateTime.Today,
+					},
+			};
+
+			collection.InsertOneAsync (listOfItems [0]);
+
+			//collection.InsertManyAsync (listOfItems, null);
+
+			//TODO: retrieve data from mongodb
+
+			//IMongoCollection<BsonDocument> collection = db.GetCollection<BsonDocument>("startup_log");
+
+
+			//TODO: insert data into mongodb
+
+			//TODO: close mongodb connection
 
 
 		}
