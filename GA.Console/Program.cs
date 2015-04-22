@@ -6,6 +6,7 @@ using MySql.Data;
 using MySql.Data.MySqlClient;
 using MongoDB.Driver;
 using MongoDB.Bson;
+using System.Threading.Tasks;
 
 namespace GA.Console
 {
@@ -15,63 +16,91 @@ namespace GA.Console
 		{
 			//CallRestService ();
 			//CallMySQLData ();
+			CallMongoData ();
+		}
 
+		static void CallMongoData ()
+		{
 			//TODO: connect to mongodb
 			//string connectionString = ConfigurationManager.ConnectionStrings[CONNECTION_STRING_KEY].ConnectionString;
-
-			MongoClient client = new MongoClient();
-			var database = client.GetDatabase("test");
-			var collection = database.GetCollection<CollectionItem>("CollectionItems");
-
-			//TODO: insert seed data into mongodb
-
-			List<CollectionItem> listOfItems = new List<CollectionItem>{ 
-					new CollectionItem{
-						ItemID 				= 1,
-						ItemTitle 			= "Anant",
-						ItemUrl 			= "http://www.anant.us",
-						ItemContentImage	= "",
-						ItemContentCache	= "",
-						ItemDescription		= "",
-						ItemTags			= new List<String>{ "Service", "Support", "Advisory", "Managed", "Maintenance", "CIO", "CTO"},
-						ItemProcessedDate 	= DateTime.Today,
-					}, 
-					new CollectionItem{
-						ItemID 				= 2,
-						ItemTitle 			= "Appleseed",
-						ItemUrl 			= "http://www.appleseedpapp.com",
-						ItemContentImage	= "",
-						ItemContentCache	= "",
-						ItemDescription		= "",
-						ItemTags			= new List<String>{ "Product", "Portal", "Search", "Integration", "Open Source"},
-						ItemProcessedDate 	= DateTime.Today,
+			Logger mylog = LogManager.GetCurrentClassLogger ();
+			MongoClient client = new MongoClient ();
+			var database = client.GetDatabase ("test");
+			var collection = database.GetCollection<CollectionItem> ("CollectionItems");
+			mylog.Info ("Connected to MongoDB ");
+			//TODO: prepare seed data into mongodb
+			List<CollectionItem> listOfItems = new List<CollectionItem> {
+				new CollectionItem {
+					ItemID = 1,
+					ItemTitle = "Anant",
+					ItemUrl = "http://www.anant.us",
+					ItemContentImage = "",
+					ItemContentCache = "",
+					ItemDescription = "",
+					ItemTags = new List<String> {
+						"Service",
+						"Support",
+						"Advisory",
+						"Managed",
+						"Maintenance",
+						"CIO",
+						"CTO"
 					},
-					new CollectionItem{
-						ItemID 				= 3,
-						ItemTitle 			= "KonoTree",
-						ItemUrl 			= "http://www.konotree.com",
-						ItemContentImage	= "",
-						ItemContentCache	= "",
-						ItemDescription		= "",
-						ItemTags			= new List<String>{ "Software as a Service", "Content", "Knowledge", "Relationships", "Internet Software"},
-						ItemProcessedDate 	= DateTime.Today,
+					ItemProcessedDate = DateTime.Today,
+				},
+				new CollectionItem {
+					ItemID = 2,
+					ItemTitle = "Appleseed",
+					ItemUrl = "http://www.appleseedpapp.com",
+					ItemContentImage = "",
+					ItemContentCache = "",
+					ItemDescription = "",
+					ItemTags = new List<String> {
+						"Product",
+						"Portal",
+						"Search",
+						"Integration",
+						"Open Source"
 					},
+					ItemProcessedDate = DateTime.Today,
+				},
+				new CollectionItem {
+					ItemID = 3,
+					ItemTitle = "KonoTree",
+					ItemUrl = "http://www.konotree.com",
+					ItemContentImage = "",
+					ItemContentCache = "",
+					ItemDescription = "",
+					ItemTags = new List<String> {
+						"Software as a Service",
+						"Content",
+						"Knowledge",
+						"Relationships",
+						"Internet Software"
+					},
+					ItemProcessedDate = DateTime.Today,
+				},
 			};
-
-			collection.InsertOneAsync (listOfItems [0]);
-
-			//collection.InsertManyAsync (listOfItems, null);
-
-			//TODO: retrieve data from mongodb
-
-			//IMongoCollection<BsonDocument> collection = db.GetCollection<BsonDocument>("startup_log");
-
-
-			//TODO: insert data into mongodb
-
-			//TODO: close mongodb connection
-
-
+			mylog.Info ("Starting Async Context");
+			// This is needed to run asynchronous methods in command line 
+			Task.Run (async () =>  {
+				//TODO: prepare seed data into mongodb
+				//await collection.InsertOneAsync (listOfItems [0]);
+				//mylog.Info ("Add One Object into Mongo");
+				await collection.InsertManyAsync (listOfItems, null);
+				mylog.Info ("Add Multiple Objects into Mongo");
+			}).Wait ();
+			Task.Run (async () =>  {
+				//TODO: retrieve data from mongodb
+				var items = await collection.Find (x => x.ItemTitle != "").ToListAsync ();
+				mylog.Info ("Retreive Information from Database");
+				foreach (CollectionItem item in items) {
+					System.Console.WriteLine (item.ItemID + ":" + item._id);
+					System.Console.WriteLine (item.ItemTitle + ":" + item.ItemUrl);
+				}
+			}).Wait ();
+			mylog.Info ("Leaving Async Context");
+			//TODO: close mongodb connection - not needed
 		}
 
 		static void CallMySQLData ()
