@@ -48,7 +48,7 @@ namespace GA.Data
 
 		//TODO: implement a page scraper via NReadability or an API 
 		// maybe use a REST service to get image/ etc and NReadability to the article itself
-		// https://www.mashape.com/pbkwee/html2text
+		// https://www.mashape.com/pbkwee/html2text + http://scraper.io/
 	}
 }
 

@@ -4,6 +4,8 @@ using System.Web.UI;
 using GA.Data;
 using System.Collections.Generic;
 using NLog;
+using System.Web.UI.WebControls;
+using System.Threading;
 
 namespace GA.Web
 {
@@ -13,36 +15,12 @@ namespace GA.Web
 		public Logger mylog = LogManager.GetCurrentClassLogger();
 
 
-		public void button1Clicked (object sender, EventArgs args)
+		protected void btnLongRunningProcess_Click(Object sender, EventArgs e)
 		{
-
-			//log when button is clicked 
-			mylog.Info ("Button is clicked");
-
-			ddlEventNames.DataSource = getMyEvents ();
-			ddlEventNames.DataBind ();
-			ddlEventNames.Visible = true;
-
-			button1.Text = "Retreived data!";
-		}
-
-		List<String> getMyEvents ()
-		{
-			//log when this service is called 
-			mylog.Info ("Service is called");
-			Rest newRestService = new Rest ();
-			List<String> dataFromService = newRestService.getEventNames ();
-			return dataFromService;
-		}
-
-		protected void ddlEventNames_SelectedIndexChanged(object sender, EventArgs e)
-		{
-			//log when 
-			button1.Text = ddlEventNames.SelectedValue;
-			mylog.Info ("Selection box was changed");
-
+			Thread.Sleep(5000);
 		}
 
 	}
+
 }
 

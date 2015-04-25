@@ -15,8 +15,22 @@ namespace GA.Web {
 		
 		protected System.Web.UI.HtmlControls.HtmlForm form1;
 		
-		protected System.Web.UI.WebControls.DropDownList ddlEventNames;
+		protected System.Web.UI.WebControls.SqlDataSource dsCollectionQueue;
 		
-		protected System.Web.UI.WebControls.Button button1;
+		protected System.Web.UI.WebControls.GridView gvCollectionQueue;
+		
+		protected System.Web.UI.WebControls.FormView fvCollectionQueue;
+		
+		protected System.Web.UI.WebControls.TextBox txtItemTitle;
+		
+		protected System.Web.UI.WebControls.TextBox txtItemUrl;
+		
+		protected System.Web.UI.WebControls.TextBox txtItemDescription;
+		
+		protected System.Web.UI.WebControls.TextBox txtItemTags;
+		
+		protected System.Web.UI.WebControls.LinkButton lbInsertItem;
+		
+		protected System.Web.UI.WebControls.Label lblItemTitle;
 	}
 }

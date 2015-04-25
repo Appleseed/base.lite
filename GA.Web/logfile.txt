@@ -2,3 +2,132 @@
 2015-04-11 14:31:07.3039|INFO|GA.Web.Default|Service is called
 2015-04-11 14:31:08.9845|INFO|GA.Web.Default|Selection box was changed
 2015-04-11 14:31:10.6609|INFO|GA.Web.Default|Selection box was changed
+2015-04-25 14:40:48.9070|INFO|GA.Web.UserView|Retreiving Collection Items .. 
+2015-04-25 15:00:54.3246|INFO|GA.Web.UserView|Connected to MongoDB 
+2015-04-25 15:00:54.6801|INFO|GA.Web.UserView|Retreive Information from Database
+2015-04-25 15:02:31.7904|INFO|GA.Web.UserView|Connected to MongoDB 
+2015-04-25 15:02:32.0136|INFO|GA.Web.UserView|Retreive Information from Database
+2015-04-25 15:05:34.4812|INFO|GA.Web.UserView|Connected to MongoDB 
+2015-04-25 15:05:34.7454|INFO|GA.Web.UserView|Retreive Information from Database
+2015-04-25 15:07:33.4438|INFO|GA.Web.UserView|Connected to MongoDB 
+2015-04-25 15:07:33.6609|INFO|GA.Web.UserView|Retreive Information from Database
+2015-04-25 15:13:24.5628|INFO|GA.Web.UserView|Connected to MongoDB 
+2015-04-25 15:13:24.9405|INFO|GA.Web.UserView|Retreive Information from Database
+2015-04-25 15:13:26.9448|INFO|GA.Web.UserView|Connected to MongoDB 
+2015-04-25 15:13:26.9448|INFO|GA.Web.UserView|Retreive Information from Database
+2015-04-25 15:14:48.2595|INFO|GA.Web.UserView|Connected to MongoDB 
+2015-04-25 15:14:48.6988|INFO|GA.Web.UserView|Retreive Information from Database
+2015-04-25 15:14:50.2615|INFO|GA.Web.UserView|Connected to MongoDB 
+2015-04-25 15:14:50.2615|INFO|GA.Web.UserView|Retreive Information from Database
+2015-04-25 15:17:17.8038|INFO|GA.Web.UserView|Connected to MongoDB 
+2015-04-25 15:17:18.1040|INFO|GA.Web.UserView|Retreive Information from Database
+2015-04-25 15:17:19.5385|INFO|GA.Web.UserView|Connected to MongoDB 
+2015-04-25 15:17:19.5385|INFO|GA.Web.UserView|Retreive Information from Database
+2015-04-25 15:17:19.5385|INFO|GA.Web.UserView|Connected to MongoDB 
+2015-04-25 15:17:51.7032|INFO|GA.Web.UserView|Connected to MongoDB 
+2015-04-25 15:17:51.9464|INFO|GA.Web.UserView|Retreive Information from Database
+2015-04-25 15:17:53.0086|INFO|GA.Web.UserView|Connected to MongoDB 
+2015-04-25 15:17:53.0086|INFO|GA.Web.UserView|Retreive Information from Database
+2015-04-25 15:17:53.0086|INFO|GA.Web.UserView|Connected to MongoDB 
+2015-04-25 15:18:48.0591|INFO|GA.Web.UserView|Connected to MongoDB 
+2015-04-25 15:18:48.2933|INFO|GA.Web.UserView|Retreive Information from Database
+2015-04-25 15:18:49.5597|INFO|GA.Web.UserView|Connected to MongoDB 
+2015-04-25 15:18:49.5597|INFO|GA.Web.UserView|Retreive Information from Database
+2015-04-25 15:18:49.5597|INFO|GA.Web.UserView|Connected to MongoDB 
+2015-04-25 15:18:49.5857|INFO|GA.Web.UserView|Retreive Information from Database
+2015-04-25 15:18:51.2750|INFO|GA.Web.UserView|Connected to MongoDB 
+2015-04-25 15:18:51.2750|INFO|GA.Web.UserView|Retreive Information from Database
+2015-04-25 15:18:51.2750|INFO|GA.Web.UserView|Connected to MongoDB 
+2015-04-25 15:18:51.2750|INFO|GA.Web.UserView|Retreive Information from Database
+2015-04-25 15:18:52.3594|INFO|GA.Web.UserView|Connected to MongoDB 
+2015-04-25 15:18:52.3594|INFO|GA.Web.UserView|Retreive Information from Database
+2015-04-25 15:18:52.3594|INFO|GA.Web.UserView|Connected to MongoDB 
+2015-04-25 15:18:52.3594|INFO|GA.Web.UserView|Retreive Information from Database
+2015-04-25 15:18:53.4869|INFO|GA.Web.UserView|Connected to MongoDB 
+2015-04-25 15:18:53.4869|INFO|GA.Web.UserView|Retreive Information from Database
+2015-04-25 15:18:53.4869|INFO|GA.Web.UserView|Connected to MongoDB 
+2015-04-25 15:18:53.4909|INFO|GA.Web.UserView|Retreive Information from Database
+2015-04-25 15:18:54.1024|INFO|GA.Web.UserView|Connected to MongoDB 
+2015-04-25 15:18:54.1024|INFO|GA.Web.UserView|Retreive Information from Database
+2015-04-25 15:18:54.1024|INFO|GA.Web.UserView|Connected to MongoDB 
+2015-04-25 15:18:54.1024|INFO|GA.Web.UserView|Retreive Information from Database
+2015-04-25 15:18:55.0880|INFO|GA.Web.UserView|Connected to MongoDB 
+2015-04-25 15:18:55.0880|INFO|GA.Web.UserView|Retreive Information from Database
+2015-04-25 15:18:55.0880|INFO|GA.Web.UserView|Connected to MongoDB 
+2015-04-25 15:18:55.0880|INFO|GA.Web.UserView|Retreive Information from Database
+2015-04-25 15:19:21.3953|INFO|GA.Web.UserView|Connected to MongoDB 
+2015-04-25 15:19:21.6264|INFO|GA.Web.UserView|Retreive Information from Database
+2015-04-25 15:19:23.1263|INFO|GA.Web.UserView|Connected to MongoDB 
+2015-04-25 15:19:23.1263|INFO|GA.Web.UserView|Retreive Information from Database
+2015-04-25 15:19:23.1343|INFO|GA.Web.UserView|Connected to MongoDB 
+2015-04-25 15:19:23.1513|INFO|GA.Web.UserView|Retreive Information from Database
+2015-04-25 15:19:24.4297|INFO|GA.Web.UserView|Connected to MongoDB 
+2015-04-25 15:19:24.4297|INFO|GA.Web.UserView|Retreive Information from Database
+2015-04-25 15:19:24.4297|INFO|GA.Web.UserView|Connected to MongoDB 
+2015-04-25 15:19:24.4297|INFO|GA.Web.UserView|Retreive Information from Database
+2015-04-25 15:19:25.2600|INFO|GA.Web.UserView|Connected to MongoDB 
+2015-04-25 15:19:25.2600|INFO|GA.Web.UserView|Retreive Information from Database
+2015-04-25 15:19:25.2600|INFO|GA.Web.UserView|Connected to MongoDB 
+2015-04-25 15:19:25.2600|INFO|GA.Web.UserView|Retreive Information from Database
+2015-04-25 15:53:39.4248|INFO|GA.Web.UserView|Connected to MongoDB 
+2015-04-25 15:53:39.6980|INFO|GA.Web.UserView|Retreive Information from Database
+2015-04-25 15:54:05.5864|INFO|GA.Web.UserView|Connected to MongoDB 
+2015-04-25 15:54:05.8475|INFO|GA.Web.UserView|Retreive Information from Database
+2015-04-25 15:54:07.9965|INFO|GA.Web.UserView|Connected to MongoDB 
+2015-04-25 15:54:07.9965|INFO|GA.Web.UserView|Retreive Information from Database
+2015-04-25 15:54:07.9965|INFO|GA.Web.UserView|Connected to MongoDB 
+2015-04-25 15:54:08.0225|INFO|GA.Web.UserView|Retreive Information from Database
+2015-04-25 15:54:09.7255|INFO|GA.Web.UserView|Connected to MongoDB 
+2015-04-25 15:54:09.7255|INFO|GA.Web.UserView|Retreive Information from Database
+2015-04-25 15:54:09.7255|INFO|GA.Web.UserView|Connected to MongoDB 
+2015-04-25 15:54:09.7255|INFO|GA.Web.UserView|Retreive Information from Database
+2015-04-25 15:54:11.2147|INFO|GA.Web.UserView|Connected to MongoDB 
+2015-04-25 15:54:11.2147|INFO|GA.Web.UserView|Retreive Information from Database
+2015-04-25 15:54:11.2147|INFO|GA.Web.UserView|Connected to MongoDB 
+2015-04-25 15:54:11.2147|INFO|GA.Web.UserView|Retreive Information from Database
+2015-04-25 15:55:08.8289|INFO|GA.Web.UserView|Connected to MongoDB 
+2015-04-25 15:55:08.8289|INFO|GA.Web.UserView|Retreive Information from Database
+2015-04-25 15:55:08.8289|INFO|GA.Web.UserView|Connected to MongoDB 
+2015-04-25 15:55:08.8349|INFO|GA.Web.UserView|Retreive Information from Database
+2015-04-25 15:55:12.0058|INFO|GA.Web.UserView|Connected to MongoDB 
+2015-04-25 15:55:12.0078|INFO|GA.Web.UserView|Retreive Information from Database
+2015-04-25 15:55:12.0078|INFO|GA.Web.UserView|Connected to MongoDB 
+2015-04-25 15:55:12.0078|INFO|GA.Web.UserView|Retreive Information from Database
+2015-04-25 15:55:16.2620|INFO|GA.Web.UserView|Connected to MongoDB 
+2015-04-25 15:55:16.2620|INFO|GA.Web.UserView|Retreive Information from Database
+2015-04-25 15:55:16.2620|INFO|GA.Web.UserView|Connected to MongoDB 
+2015-04-25 15:55:16.2620|INFO|GA.Web.UserView|Retreive Information from Database
+2015-04-25 15:55:17.8386|INFO|GA.Web.UserView|Connected to MongoDB 
+2015-04-25 15:55:17.8386|INFO|GA.Web.UserView|Retreive Information from Database
+2015-04-25 15:55:17.8386|INFO|GA.Web.UserView|Connected to MongoDB 
+2015-04-25 15:55:17.8386|INFO|GA.Web.UserView|Retreive Information from Database
+2015-04-25 15:56:12.1344|INFO|GA.Web.UserView|Connected to MongoDB 
+2015-04-25 15:56:12.3956|INFO|GA.Web.UserView|Retreive Information from Database
+2015-04-25 15:56:13.8621|INFO|GA.Web.UserView|Connected to MongoDB 
+2015-04-25 15:56:13.8621|INFO|GA.Web.UserView|Retreive Information from Database
+2015-04-25 15:56:13.8711|INFO|GA.Web.UserView|Connected to MongoDB 
+2015-04-25 15:56:13.8911|INFO|GA.Web.UserView|Retreive Information from Database
+2015-04-25 15:56:15.6886|INFO|GA.Web.UserView|Connected to MongoDB 
+2015-04-25 15:56:15.6986|INFO|GA.Web.UserView|Retreive Information from Database
+2015-04-25 15:56:15.6986|INFO|GA.Web.UserView|Connected to MongoDB 
+2015-04-25 15:56:15.6986|INFO|GA.Web.UserView|Retreive Information from Database
+2015-04-25 15:56:17.1613|INFO|GA.Web.UserView|Connected to MongoDB 
+2015-04-25 15:56:17.1623|INFO|GA.Web.UserView|Retreive Information from Database
+2015-04-25 15:56:17.1623|INFO|GA.Web.UserView|Connected to MongoDB 
+2015-04-25 15:56:17.1623|INFO|GA.Web.UserView|Retreive Information from Database
+2015-04-25 15:57:09.7427|INFO|GA.Web.UserView|Connected to MongoDB 
+2015-04-25 15:57:09.7427|INFO|GA.Web.UserView|Retreive Information from Database
+2015-04-25 15:57:11.2537|INFO|GA.Web.UserView|Connected to MongoDB 
+2015-04-25 15:57:11.2537|INFO|GA.Web.UserView|Retreive Information from Database
+2015-04-25 15:57:11.2567|INFO|GA.Web.UserView|Connected to MongoDB 
+2015-04-25 15:57:11.2567|INFO|GA.Web.UserView|Retreive Information from Database
+2015-04-25 15:57:15.0950|INFO|GA.Web.UserView|Connected to MongoDB 
+2015-04-25 15:57:15.0950|INFO|GA.Web.UserView|Retreive Information from Database
+2015-04-25 15:57:16.2560|INFO|GA.Web.UserView|Connected to MongoDB 
+2015-04-25 15:57:16.2560|INFO|GA.Web.UserView|Retreive Information from Database
+2015-04-25 15:57:16.2560|INFO|GA.Web.UserView|Connected to MongoDB 
+2015-04-25 15:57:16.2560|INFO|GA.Web.UserView|Retreive Information from Database
+2015-04-25 15:57:18.9138|INFO|GA.Web.UserView|Connected to MongoDB 
+2015-04-25 15:57:18.9138|INFO|GA.Web.UserView|Retreive Information from Database
+2015-04-25 15:57:18.9138|INFO|GA.Web.UserView|Connected to MongoDB 
+2015-04-25 15:57:18.9138|INFO|GA.Web.UserView|Retreive Information from Database

@@ -1,14 +1,31 @@
-﻿<Properties StartupItem="GA.Console\GA.Console.csproj">
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug|x86" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="GA.Console\Program.cs">
+﻿<Properties StartupItem="GA.Web\GA.Web.csproj">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug|x86" PreferredExecutionTarget="ChromeHTML" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="GA.Web\UserView.aspx.cs">
     <Files>
-      <File FileName="GA.Web\web.config" Line="41" Column="17" />
-      <File FileName="GA.Web\GA.Web.csproj" Line="1" Column="1" />
-      <File FileName="GA.Console\app.config" Line="13" Column="67" />
+      <File FileName="GA.Data\Models\CollectionItem.cs" Line="2" Column="14" />
+      <File FileName="GA.Console\Program.cs" Line="112" Column="101" />
+      <File FileName="GA.Web\Default.aspx.cs" Line="15" Column="16" />
+      <File FileName="GA.Data\Rest.cs" Line="1" Column="1" />
+      <File FileName="GA.Data\Repositories\CollectionItemQueue.cs" Line="61" Column="65" />
+      <File FileName="GA.Data\Repositories\CollectionItemRepository.cs" Line="74" Column="22" />
       <File FileName="GA.Console\packages.config" Line="1" Column="1" />
-      <File FileName="GA.Web\Default.aspx.cs" Line="8" Column="8" />
-      <File FileName="GA.Web\Global.asax.cs" Line="1" Column="1" />
-      <File FileName="GA.Console\Program.cs" Line="28" Column="4" />
+      <File FileName="GA.Data\Repositories\WebPageRepository.cs" Line="55" Column="1" />
+      <File FileName="GA.Web\Site.master" Line="10" Column="6" />
+      <File FileName="GA.Web\Site.master.cs" Line="1" Column="1" />
+      <File FileName="GA.Web\Admin.aspx" Line="65" Column="1" />
+      <File FileName="GA.Web\Admin.aspx.cs" Line="12" Column="2" />
+      <File FileName="GA.Web\Admin.aspx.designer.cs" Line="1" Column="1" />
+      <File FileName="GA.Web\web.config" Line="54" Column="17" />
+      <File FileName="GA.Web\Default.aspx" Line="100" Column="4" />
+      <File FileName="GA.Web\Default.aspx.designer.cs" Line="1" Column="1" />
+      <File FileName="GA.Web\User.aspx" Line="11" Column="3" />
+      <File FileName="GA.Web\User.aspx.cs" Line="4" Column="1" />
+      <File FileName="GA.Web\Service.asmx" Line="1" Column="1" />
+      <File FileName="GA.Web\Service.asmx.cs" Line="9" Column="3" />
+      <File FileName="GA.Web\User.aspx.designer.cs" Line="1" Column="1" />
+      <File FileName="GA.Web\UserView.aspx" Line="11" Column="26" />
+      <File FileName="GA.Web\UserView.aspx.cs" Line="26" Column="14" />
+      <File FileName="GA.Web\UserView.aspx.designer.cs" Line="1" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

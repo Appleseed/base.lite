@@ -3,6 +3,8 @@ using NLog;
 using System.Collections.Generic;
 using MongoDB.Driver;
 
+using System.Threading.Tasks;
+
 namespace GA.Data
 {
 	/// <summary>
@@ -73,7 +75,22 @@ namespace GA.Data
 			Log.Info ("Retreiving Collection Items .. ");
 			var Database = Client.GetDatabase (this.DatabaseName);
 			var Collection = Database.GetCollection<CollectionItem> ("CollectionItems");
-			return (List<CollectionItem>)Collection;
+
+			List<CollectionItem> returnedItems = new List<CollectionItem>{};
+
+			//var items = null;
+			Task.Run (async () =>  {
+				var items = await Collection.Find (x => x.ItemTitle != "").ToListAsync ();
+			
+
+				foreach (CollectionItem item in items) {
+					returnedItems.Add (item);
+				}
+
+			}).Wait ();
+
+
+			return returnedItems;
 		}
 
 		//TODO: implement method to insert batch repository items 

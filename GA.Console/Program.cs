@@ -7,6 +7,7 @@ using MySql.Data.MySqlClient;
 using MongoDB.Driver;
 using MongoDB.Bson;
 using System.Threading.Tasks;
+using NReadability;
 
 namespace GA.Console
 {
@@ -16,7 +17,75 @@ namespace GA.Console
 		{
 			//CallRestService ();
 			//CallMySQLData ();
-			CallMongoData ();
+			//CallMongoData ();
+
+			//TODO: go through items in MYSQL
+
+			Logger mylog = LogManager.GetCurrentClassLogger ();
+			//TODO: Connect to MYSQL Successfully with out error
+			MySqlConnection myConnection = new MySqlConnection ("Server=localhost;Database=ga;Uid=root;Pwd=;");
+			myConnection.Open ();
+			mylog.Info ("Connected to the database");
+			//TODO: Select data from table in MYSQL Successfully and get it back in .NET
+			MySqlCommand myCommand = new MySqlCommand ("SELECT * FROM collectionitemqueue", myConnection);
+			MySqlDataReader myReader = myCommand.ExecuteReader ();
+			mylog.Info ("Executed the command in the database");
+			//TODO: enumerate through data and display on console
+
+			List<CollectionItem> itemCollection = new List<CollectionItem>();
+
+			if (myReader.HasRows) {
+				mylog.Info ("This reader has rows");
+				while (myReader.Read ()) {
+
+					List<string> itemTags = new List<string>(myReader.GetString ("ItemTags").Split(','));
+
+
+					CollectionItem item = new CollectionItem {
+						ItemID = myReader.GetInt32 ("ItemID"),
+						ItemUrl = myReader.GetString ("ItemUrl"),
+						ItemTitle = myReader.GetString ("ItemTitle"),
+						ItemContentImage = "",
+						ItemContentCache = "",
+						ItemDescription = myReader.GetString ("ItemDescription"),
+						ItemTags = itemTags,
+						ItemProcessedDate	= DateTime.Today,	
+					};
+
+
+					//TODO: extract content from web
+
+					NReadabilityWebTranscoder wt = new NReadabilityWebTranscoder ();
+					WebTranscodingResult wtr =  wt.Transcode (new WebTranscodingInput (item.ItemUrl));
+
+					item.ItemContentCache = wtr.ExtractedContent;
+					item.ItemTitle = wtr.ExtractedTitle;
+
+					itemCollection.Add (item);
+
+					System.Console.WriteLine (myReader.GetString ("ItemTitle") + ":" + myReader.GetString ("ItemUrl"));
+
+				}
+			}
+			myReader.Close ();
+
+
+
+			//TODO: insert object into MongoDB 
+
+			MongoClient client = new MongoClient ();
+			var database = client.GetDatabase ("test");
+			var collection = database.GetCollection<CollectionItem> ("CollectionItems");
+			mylog.Info ("Connected to MongoDB ");
+
+			mylog.Info ("Starting Async Context");
+			// This is needed to run asynchronous methods in command line 
+			Task.Run (async () =>  {
+
+				await collection.InsertManyAsync (itemCollection, null);
+				mylog.Info ("Add Multiple Objects into Mongo");
+			}).Wait ();
+
 		}
 
 		static void CallMongoData ()
@@ -51,7 +120,7 @@ namespace GA.Console
 				new CollectionItem {
 					ItemID = 2,
 					ItemTitle = "Appleseed",
-					ItemUrl = "http://www.appleseedpapp.com",
+					ItemUrl = "http://www.appleseedapp.com",
 					ItemContentImage = "",
 					ItemContentCache = "",
 					ItemDescription = "",
@@ -90,6 +159,8 @@ namespace GA.Console
 				await collection.InsertManyAsync (listOfItems, null);
 				mylog.Info ("Add Multiple Objects into Mongo");
 			}).Wait ();
+
+
 			Task.Run (async () =>  {
 				//TODO: retrieve data from mongodb
 				var items = await collection.Find (x => x.ItemTitle != "").ToListAsync ();
