@@ -7,14 +7,12 @@
 <body>
 	<form id="form1" runat="server">
 
-
 		<asp:Label id="lblCount" runat="server"></asp:Label>
-
 		<asp:DataList id="lvCollectionItems" runat="server" >
 			<ItemTemplate>
 				<%# Eval("ItemTitle") %> : 
 				<%# Eval("ItemDescription") %> <br>
-				<asp:LinkButton id="lbViewItem" runat="server" CommandName="View" CommandArgument='<%# Eval("ItemID") %>' OnCommand="lbViewItem_OnCommand" >View </asp:LinkButton>
+				<asp:LinkButton id="lbViewItem" runat="server" CommandName="View" CommandArgument='<%# Eval("_id") %>' OnCommand="lbViewItem_OnCommand" >View </asp:LinkButton>
 			</ItemTemplate>
 		</asp:DataList>
 
@@ -33,6 +31,8 @@
 
 			</ItemTemplate>
 		</asp:FormView>
+
+		<iframe id="ifContentCache" runat="server"></iframe>
 
 	</form>
 </body>

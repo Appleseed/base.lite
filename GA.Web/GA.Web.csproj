@@ -60,8 +60,6 @@
     <Content Include="Default.aspx" />
     <Content Include="packages.config" />
     <Content Include="Site.master" />
-    <Content Include="Admin.aspx" />
-    <Content Include="User.aspx" />
     <Content Include="Service.asmx" />
     <Content Include="UserView.aspx" />
   </ItemGroup>
@@ -80,18 +78,6 @@
     </Compile>
     <Compile Include="Site.master.designer.cs">
       <DependentUpon>Site.master</DependentUpon>
-    </Compile>
-    <Compile Include="Admin.aspx.cs">
-      <DependentUpon>Admin.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="Admin.aspx.designer.cs">
-      <DependentUpon>Admin.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="User.aspx.cs">
-      <DependentUpon>User.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="User.aspx.designer.cs">
-      <DependentUpon>User.aspx</DependentUpon>
     </Compile>
     <Compile Include="Service.asmx.cs">
       <DependentUpon>Service.asmx</DependentUpon>

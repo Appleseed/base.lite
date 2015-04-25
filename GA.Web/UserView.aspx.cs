@@ -28,7 +28,6 @@ namespace GA.Web
 
 			CollectionList_DataBind ();
 
-
 		}	
 
 		/// <summary>
@@ -71,10 +70,12 @@ namespace GA.Web
 
 				Task.Run (async () =>  {
 					//TODO: retrieve data from mongodb
-					var items = await collection.Find (x => x.ItemID == Int32.Parse(args.CommandArgument.ToString())).ToListAsync ();
+					var items = await collection.Find (x => x._id == ObjectId.Parse ((string)args.CommandArgument) ).ToListAsync ();
 					mylog.Info ("Retreive Information from Database");
 					fvCollectionItem.DataSource = items;
 					fvCollectionItem.DataBind();
+
+					//ifContentCache.InnerHtml = "Things will go here";
 				}).Wait ();
 
 				fvCollectionItem.Visible = true;

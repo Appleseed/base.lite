@@ -2,6 +2,7 @@
 using System.Web;
 using System.Net;
 using NLog;
+using NReadability;
 
 namespace GA.Data
 {
@@ -26,12 +27,30 @@ namespace GA.Data
 		}
 
 		/// <summary>
-		/// Gets or sets the client.
+		/// Gets the content of the extracted.
 		/// </summary>
-		/// <value>The client.</value>
-		private WebClient Client {
+		/// <value>The content of the extracted.</value>
+		public string ExtractedContent {
 			get;
-			set;
+			private set;
+		}
+
+		/// <summary>
+		/// Gets the extracted title.
+		/// </summary>
+		/// <value>The extracted title.</value>
+		public string ExtractedTitle {
+			get;
+			private set;
+		}
+
+		/// <summary>
+		/// Gets the extracted image.
+		/// </summary>
+		/// <value>The extracted image.</value>
+		public string ExtractedImage {
+			get;
+			private set;
 		}
 
 		/// <summary>
@@ -44,11 +63,23 @@ namespace GA.Data
 			this.Log = logger;
 			this.ConnectionURL = incomingConnectionURL;
 
+			//DONE: implement a page scraper via NReadability or an API 
+			// maybe use a REST service to get image/ etc and NReadability to the article itself
+			// https://www.mashape.com/pbkwee/html2text + http://scraper.io/
+
+			try {
+				NReadabilityWebTranscoder wt = new NReadabilityWebTranscoder ();
+				WebTranscodingResult wtr = wt.Transcode (new WebTranscodingInput (this.ConnectionURL));
+
+				this.ExtractedContent = wtr.ExtractedContent;
+				this.ExtractedTitle = wtr.ExtractedTitle;
+				this.ExtractedImage = "";
+			} catch (Exception ex) {
+				Log.ErrorException ("Error", ex);
+			} 
 		}
 
-		//TODO: implement a page scraper via NReadability or an API 
-		// maybe use a REST service to get image/ etc and NReadability to the article itself
-		// https://www.mashape.com/pbkwee/html2text + http://scraper.io/
+
 	}
 }
 
