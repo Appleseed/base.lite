@@ -79,7 +79,12 @@ namespace GA.Engine
 	{
 		public void Log(LogEvent logEvent)
 		{
-			Clients.Others.Log(logEvent);
+			Clients.All.Log (logEvent);
+
+		}
+
+		public void Hello(){
+			this.Clients.Caller.Log(new LogEvent{Level="Info", Message="SignalR Connected", TimeStamp = DateTime.UtcNow});
 		}
 	}
 

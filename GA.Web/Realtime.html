@@ -1,0 +1,50 @@
+﻿
+<html>
+	<head>
+		<title>GA.Web - Realtime Test</title>
+		 <style type="text/css">
+        .container {
+            background-color: #99CCFF;
+            border: thick solid #808080;
+            padding: 20px;
+            margin: 20px;
+        }
+    	</style>
+	</head>
+	<body>
+
+	<div class="container">
+        <ul id="updates"></ul>
+    </div>
+
+   <script src="/Scripts/jquery-2.1.4.js"></script>
+    <script src="/Scripts/jquery.signalR-2.2.0.js"></script>
+    <script src="http://localhost:8081/signalr/hubs"></script>
+
+	<script type="text/javascript">
+
+	        $(function() {
+	        	
+	        	console.log("setting up the connection");
+	        	$.connection.hub.url = "http://localhost:8081/signalr";
+
+	            var nlog = $.connection.loggingHub;
+				nlog.client.log = function (logEvent) {
+    				console.log("logEvent -");
+	                // Add the message to the page.
+	                $('#updates').append('<li><strong>' + logEvent.LogLevel
+	                    + '</strong>:&nbsp;&nbsp;' + logEvent.Message + ' <i>'+ logEvent.TimeStamp +'</i>' +'</li>');
+
+				};
+
+	            $.connection.hub.start().done(function() {
+	                console.log("connected");
+	                nlog.server.hello();
+	            });
+
+
+	        });     
+
+	</script>
+	</body>
+</html>

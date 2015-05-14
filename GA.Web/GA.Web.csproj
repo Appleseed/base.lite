@@ -80,6 +80,7 @@
     <Content Include="Scripts\jquery-2.1.4.min.js" />
     <Content Include="Scripts\jquery.signalR-2.2.0.js" />
     <Content Include="Scripts\jquery.signalR-2.2.0.min.js" />
+    <Content Include="Realtime.html" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Global.asax.cs">

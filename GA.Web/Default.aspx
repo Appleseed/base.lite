@@ -3,6 +3,7 @@
 <html>
 <head runat="server">
 	<title>Default</title>
+
 </head>
 <body>
 	<form id="form1" runat="server">
@@ -101,30 +102,6 @@ TODO: add SqlDataSource Control that uses MYSQL
    
 </asp:UpdateProgress>
 
-
-   <script src="<%: ResolveUrl("~/Scripts/jquery-1.8.2.js") %>"></script>
-    <script src="<%: ResolveUrl("~/Scripts/bootstrap.js") %>"></script>
-    <script src="<%: ResolveUrl("~/Scripts/signalr.samples.js") %>"></script>
-    <script src="<%: ResolveUrl("~/Scripts/json2.js") %>"></script>
-    <script src="<%: ResolveUrl("~/Scripts/jquery.signalR.js") %>"></script>
-    <script src="<%: ResolveUrl("http://localhost:8081/signalr/hubs") %>"></script>
-	<script  type="text/javascript">
-
-	        $(function() {
-
-	            var nlog = $.connection.loggingHub;
-	            nlog.client.log = function(logEvent) {
-	                //Put code here to handle the logEvent that is sent.
-	                alert(logEvent);
-	            };
-
-	            $.connection.hub.start().done(function() {
-	                //Put code here that you want to execute after connecting to the Hub.
-	                alert("connected");
-	            });
-	        })      
-
-	    <Script>
 	</form>
 </body>
 </html>
