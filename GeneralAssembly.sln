@@ -5,9 +5,9 @@ VisualStudioVersion = 12.0.30501.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GA.Data", "GA.Data\GA.Data.csproj", "{D5E78361-25B0-4C70-92C8-B49B718C8B77}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GA.Console", "GA.Console\GA.Console.csproj", "{1C6D271E-7994-46E9-95EE-19E30775AE29}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GA.Web", "GA.Web\GA.Web.csproj", "{1C5D7F8F-4D03-4C59-A84A-6B59353415CB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GA.Engine", "GA.Engine\GA.Engine.csproj", "{1C6D271E-7994-46E9-95EE-19E30775AE29}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

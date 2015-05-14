@@ -15,7 +15,13 @@ namespace GA.Web {
 		
 		protected System.Web.UI.HtmlControls.HtmlForm form1;
 		
+		protected System.Web.UI.ScriptManager ScriptManager1;
+		
 		protected System.Web.UI.WebControls.SqlDataSource dsCollectionQueue;
+		
+		protected System.Web.UI.UpdatePanel UpdatePanel1;
+		
+		protected System.Web.UI.WebControls.Button btnLongRunningProcess;
 		
 		protected System.Web.UI.WebControls.GridView gvCollectionQueue;
 		
@@ -32,5 +38,7 @@ namespace GA.Web {
 		protected System.Web.UI.WebControls.LinkButton lbInsertItem;
 		
 		protected System.Web.UI.WebControls.Label lblItemTitle;
+		
+		protected System.Web.UI.UpdateProgress UpdateProgress1;
 	}
 }

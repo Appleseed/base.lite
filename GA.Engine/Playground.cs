@@ -9,7 +9,7 @@ using NLog;
 using GA.Data;
 using System.Collections.Generic;
 
-namespace GA.Console
+namespace GA.Engine
 {
 	/// <summary>
 	/// Playground. Old methods. 
