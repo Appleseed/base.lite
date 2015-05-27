@@ -1,0 +1,12 @@
+﻿<Properties StartupItem="Appleseed.Base.Data\Appleseed.Base.Data.csproj">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug|x86" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Appleseed.Base.Web\Default.aspx.cs">
+    <Files>
+      <File FileName="Appleseed.Base.Web\Default.aspx.cs" Line="4" Column="22" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+</Properties>
