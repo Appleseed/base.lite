@@ -1,8 +1,12 @@
 ﻿<Properties StartupItem="Appleseed.Base.Data\Appleseed.Base.Data.csproj">
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug|x86" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Appleseed.Base.Web\Default.aspx.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Appleseed.Base.Web\README.md">
     <Files>
-      <File FileName="Appleseed.Base.Web\Default.aspx.cs" Line="4" Column="22" />
+      <File FileName="Appleseed.Base.Web\Default.aspx.cs" Line="14" Column="26" />
+      <File FileName="Appleseed.Base.Web\UserView.aspx.cs" Line="72" Column="15" />
+      <File FileName="Appleseed.Base.Data\README.md" Line="7" Column="21" />
+      <File FileName="Appleseed.Base.Web\README.md" Line="8" Column="1" />
+      <File FileName="Appleseed.Base.Engine\README.md" Line="8" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
