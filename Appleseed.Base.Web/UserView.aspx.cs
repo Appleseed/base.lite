@@ -42,13 +42,13 @@ namespace Appleseed.Base.Web
 			var collection = database.GetCollection<BaseCollectionItem> ("CollectionItems");
 			mylog.Info ("Connected to MongoDB ");
 
-			Task.Run (async () =>  {
+			/*Task.Run (async () =>  {
 				//TODO: retrieve data from mongodb
 				var items = await collection.Find (x => x.ItemTitle != "").ToListAsync ();
 				mylog.Info ("Retreive Information from Database");
 				lvCollectionItems.DataSource = items;
 				lvCollectionItems.DataBind();
-			}).Wait ();
+			}).Wait ();*/
 
 			//TODO: bind count to the number of items in the DB 
 

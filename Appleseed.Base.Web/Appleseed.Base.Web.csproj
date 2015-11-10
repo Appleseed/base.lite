@@ -96,21 +96,25 @@
     </Compile>
     <Compile Include="Default.aspx.cs">
       <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Default.aspx.designer.cs">
       <DependentUpon>Default.aspx</DependentUpon>
     </Compile>
     <Compile Include="Site.master.cs">
       <DependentUpon>Site.master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Site.master.designer.cs">
       <DependentUpon>Site.master</DependentUpon>
     </Compile>
     <Compile Include="Service.asmx.cs">
       <DependentUpon>Service.asmx</DependentUpon>
+      <SubType>Component</SubType>
     </Compile>
     <Compile Include="UserView.aspx.cs">
       <DependentUpon>UserView.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="UserView.aspx.designer.cs">
       <DependentUpon>UserView.aspx</DependentUpon>
