@@ -1,7 +1,4 @@
-﻿using System;
-using System.Collections;
-using System.Collections.Generic;
-using System.Collections.Specialized;
+﻿using System.Collections.Generic;
 
 namespace Appleseed.Base.Data
 {
@@ -43,7 +40,7 @@ namespace Appleseed.Base.Data
 		//bool IsEmpty { get; }
 		void Enqueue(T item);
 		void Enqueue(List<T> items);
-		T Dequeue();
+		T Dequeue(T item);
 		T Peek();
 		//bool Contains(T item);
 

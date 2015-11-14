@@ -1,0 +1,8 @@
+packages/*
+Appleseed.Base.Data/bin/*
+Appleseed.Base.Data/obj/*
+Appleseed.Base.Engine/bin/*
+Appleseed.Base.Engine/obj/*
+Appleseed.Base.Web/bin/*
+Appleseed.Base.Web/obj/*
+.vs/*
