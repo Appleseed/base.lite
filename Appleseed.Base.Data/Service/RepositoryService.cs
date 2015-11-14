@@ -19,9 +19,9 @@ namespace Appleseed.Base.Data.Service
             return repository;
         }
 
-        public static IRepository GetRepository(string connectionString, string databaseType)
+        public static IRepository GetRepository(string connectionString, string queueName)
         {
-            var repository = GetConditionalRepository(connectionString, databaseType);
+            var repository = GetConditionalRepository(connectionString, queueName);
             return repository;
         }
 

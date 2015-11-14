@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Configuration;
+using System.Linq;
 using Appleseed.Base.Data.Model;
 using Appleseed.Base.Data.Queue;
 using Appleseed.Base.Data.Repository;
@@ -16,7 +17,7 @@ using NLog;
 using NLog.SignalR;
 using Owin;
 
-[assembly: OwinStartup(typeof (Startup))]
+[assembly: OwinStartup(typeof(Startup))]
 
 namespace Appleseed.Base.Engine
 {
@@ -24,7 +25,7 @@ namespace Appleseed.Base.Engine
     {
         public static void Main(string[] args)
         {
-            
+
             // DONE: define the logger 
             var log = LogManager.GetCurrentClassLogger();
 
@@ -40,19 +41,29 @@ namespace Appleseed.Base.Engine
 					while (! Console.KeyAvailable) {*/
 
                 var queueSection = ConfigurationManager.GetSection("queue") as QueueSection;
-               
-                var repositories = RepositoryService.GetAllRepositories(queueSection);
-
-                foreach (var repository in repositories)
+                var singleQueueName = "MySqlQueue";
+                
+                var queue = queueSection.Queue.SingleOrDefault(x => String.Equals(x.QueueName, singleQueueName, StringComparison.CurrentCultureIgnoreCase));
+                if (queue != null)
                 {
+                    var repository = RepositoryService.GetRepository(queue.ConnectionString, queue.QueueName);
                     ProcessQueueCycle(repository, log);
                 }
+                
+                /*else
+                {
+                    var repositories = RepositoryService.GetAllRepositories(queueSection);
+
+                    foreach (var repository in repositories)
+                    {
+                        ProcessQueueCycle(repository, log);
+                    }
+                }*/
 
                 /*
 
 					}
-				} while (Console.ReadKey(true).Key != ConsoleKey.Escape); 
-*/
+				} while (Console.ReadKey(true).Key != ConsoleKey.Escape); */
             }
         }
 
@@ -220,7 +231,7 @@ namespace Appleseed.Base.Engine
 
         public void Hello()
         {
-            Clients.Caller.Log(new LogEvent {Level = "Info", Message = "SignalR Connected", TimeStamp = DateTime.UtcNow});
+            Clients.Caller.Log(new LogEvent { Level = "Info", Message = "SignalR Connected", TimeStamp = DateTime.UtcNow });
         }
     }
 
