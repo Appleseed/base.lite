@@ -39,20 +39,18 @@ namespace Appleseed.Base.Engine
                 /*
 				do {
 					while (! Console.KeyAvailable) {*/
+
                 var queueSection = ConfigurationManager.GetSection("queue") as QueueSection;
-                var singleQueueName = ConfigurationManager.AppSettings["SingleQueueName"];
-                if (singleQueueName!=null)
+                var singleQueueName = "MySqlQueue";
+                
+                var queue = queueSection.Queue.SingleOrDefault(x => String.Equals(x.QueueName, singleQueueName, StringComparison.CurrentCultureIgnoreCase));
+                if (queue != null)
                 {
-                    var queue =
-                        queueSection.Queue.SingleOrDefault(
-                            x => String.Equals(x.QueueName, singleQueueName, StringComparison.CurrentCultureIgnoreCase));
-                    if (queue != null)
-                    {
-                        var repository = RepositoryService.GetRepository(queue.ConnectionString, queue.QueueName);
-                        ProcessQueueCycle(repository, log);
-                    }
+                    var repository = RepositoryService.GetRepository(queue.ConnectionString, queue.QueueName);
+                    ProcessQueueCycle(repository, log);
                 }
-                else
+                
+                /*else
                 {
                     var repositories = RepositoryService.GetAllRepositories(queueSection);
 
@@ -60,7 +58,7 @@ namespace Appleseed.Base.Engine
                     {
                         ProcessQueueCycle(repository, log);
                     }
-                }
+                }*/
 
                 /*
 
