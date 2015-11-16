@@ -41,15 +41,18 @@ namespace Appleseed.Base.Engine
 					while (! Console.KeyAvailable) {*/
 
                 var queueSection = ConfigurationManager.GetSection("queue") as QueueSection;
-                var singleQueueName = "MySqlQueue";
-                
-                var queue = queueSection.Queue.SingleOrDefault(x => String.Equals(x.QueueName, singleQueueName, StringComparison.CurrentCultureIgnoreCase));
-                if (queue != null)
+                const string singleQueueName = "MySqlQueue";
+
+                if (queueSection != null)
                 {
-                    var repository = RepositoryService.GetRepository(queue.ConnectionString, queue.QueueName);
-                    ProcessQueueCycle(repository, log);
+                    var queue = queueSection.Queue.SingleOrDefault(x => String.Equals(x.QueueName, singleQueueName, StringComparison.CurrentCultureIgnoreCase));
+                    if (queue != null)
+                    {
+                        var repository = RepositoryService.GetRepository(queue.ConnectionString, queue.QueueName);
+                        ProcessQueueCycle(repository, log);
+                    }
                 }
-                
+
                 /*else
                 {
                     var repositories = RepositoryService.GetAllRepositories(queueSection);
